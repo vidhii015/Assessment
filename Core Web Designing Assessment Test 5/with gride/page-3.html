@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .bcg {
+        background-image: url(https://www.cityam.com/wp-content/uploads/2022/08/office-work-Jobbio.jpg);
+        position: relative;
+        isolation: isolate;
+      }
+      .bcg::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.668);
+        position: absolute;
+        z-index: -1;
+        top: 0;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      :root {
+        --primary-padding: 10px 70px;
+        --margin-top: 30px;
+        --icon-primary-color: #a02d30;
+        --icon-secondary-color: #f5a425;
+        --text-color: #ffffff;
+      }
+      /* header */
+      header .header-top {
+        padding: var(--primary-padding);
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        background-color: #1d2023;
+        color: var(--text-color);
+
+        .socials {
+          display: flex;
+          gap: 20px;
+        }
+      }
+
+      header .header-bottom {
+        padding: 27px 70px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        background-color: #8c8a8a47;
+        color: var(--text-color);
+      }
+      header .header-bottom #toggle {
+        display: none;
+      }
+      header .header-bottom #toggle:checked + .wrapper {
+        visibility: visible;
+        top: 50px;
+        opacity: 1;
+      }
+      header .header-bottom .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 30px;
+        transition: all 300ms;
+      }
+      header .header-bottom nav {
+        margin-left: auto;
+        margin-right: 10px;
+        display: flex;
+        gap: 10px;
+      }
+      header .header-bottom nav a {
+        text-decoration: none;
+        color: black;
+        margin-right: 10px;
+        color: var(--secondary-text-color);
+      }
+
+      .apply-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 55px 120px;
+      }
+      .apply-section .apply {
+        padding: 70px 0;
+      }
+      .apply-section .apply .apply-info {
+        width: 65%;
+        color: var(--text-color);
+        background-color: rgba(255, 255, 255, 0.271);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 20px;
+        gap: 20px;
+      }
+      .apply-section .apply .apply-info button {
+        border: 0;
+        padding: 7px 15px;
+        border-radius: 15px;
+        color: var(--text-color);
+      }
+      .apply-section .apply .apply-info#one button {
+        background-color: var(--icon-primary-color);
+      }
+      .apply-section .apply .apply-info#two button {
+        background-color: var(--icon-secondary-color);
+      }
+      .apply-section .about-meeting {
+        width: 40%;
+        background-color: var(--text-color);
+        padding: 30px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h3:nth-child(1) {
+          color: var(--icon-secondary-color);
+        }
+
+        p {
+          margin: 7px 0 0 25px;
+        }
+
+        .title {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px 0 50px;
+        color: var(--text-color);
+
+        h5 {
+          margin-top: 10px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        :root {
+          --primary-padding: 10px 10px;
+        }
+
+        header .header-top {
+          font-size: 11px;
+          justify-content: center;
+        }
+        header .header-top .socials {
+          display: none;
+        }
+
+        header .header-bottom {
+          padding: 23px 15px;
+          position: relative;
+        }
+        header .header-bottom .wrapper {
+          visibility: hidden;
+        }
+        header .header-bottom .wrapper {
+          position: absolute;
+          top: 40px;
+          right: 20px;
+          opacity: 0;
+          border-radius: 8px;
+          background-color: rgb(191, 191, 191);
+          padding: 10px;
+        }
+        header .header-bottom .wrapper nav {
+          flex-direction: column;
+        }
+
+        .apply-section {
+          padding: 50px 20px;
+        }
+        .apply-section .apply {
+          padding: 40px 0;
+        }
+        .apply-section .apply .apply-info {
+          width: 90%;
+        }
+        .apply-section .about-meeting {
+          width: 90%;
+
+          h3 {
+            font-size: 12px;
+          }
+          p {
+            font-size: 10px;
+            margin: 0;
+          }
+        }
+
+        footer {
+          padding: 20px 10px 30px;
+        }
+      }
+      @media (min-width: 400px) {
+        :root {
+          --primary-padding: 10px 50px;
+        }
+
+        header .header-top .socials {
+          display: none;
+        }
+
+        header .header-bottom {
+          padding: 23px 50px;
+          position: relative;
+        }
+        header .header-bottom .wrapper {
+          visibility: hidden;
+        }
+        header .header-bottom .wrapper {
+          position: absolute;
+          top: 40px;
+          right: 20px;
+          opacity: 0;
+          border-radius: 8px;
+          background-color: lightgray;
+          padding: 10px;
+        }
+        header .header-bottom .wrapper nav {
+          flex-direction: column;
+        }
+
+        .apply-section {
+          padding: 50px 20px;
+        }
+        .apply-section .apply {
+          padding: 40px 0;
+        }
+        .apply-section .apply .apply-info {
+          width: 90%;
+        }
+        .apply-section .about-meeting {
+          width: 90%;
+
+          h3 {
+            font-size: 12px;
+          }
+          p {
+            font-size: 10px;
+            margin: 0;
+          }
+        }
+
+        footer {
+          padding: 30px 10px 40px;
+        }
+      }
+      @media (min-width: 576px) {
+        header .header-top .socials {
+          display: flex;
+        }
+
+        header .header-bottom {
+          padding: 27px 50px;
+        }
+      }
+      @media (min-width: 992px) {
+        header .header-bottom label {
+          display: none;
+        }
+        header .header-bottom .wrapper {
+          visibility: visible;
+          opacity: 1;
+          position: static;
+          flex-direction: row;
+          background-color: transparent;
+        }
+        header .header-bottom .wrapper nav {
+          flex-direction: row;
+        }
+
+        .apply-section {
+          padding: 60px 20px;
+          flex-wrap: nowrap;
+        }
+        .apply-section .apply {
+          padding: 40px 0;
+        }
+        .apply-section .about-meeting {
+          width: 90%;
+
+          h3 {
+            font-size: 17px;
+          }
+          p {
+            font-size: 15px;
+            margin: 0;
+          }
+        }
+
+        footer {
+          padding: 30px 0 40px;
+        }
+      }
+      @media (min-width: 1200px) {
+        :root {
+          --primary-padding: 10px 70px;
+        }
+
+        header .header-bottom {
+          padding: 27px 70px;
+        }
+
+        .apply-section {
+          padding: 55px 120px;
+        }
+        .apply-section .about-meeting {
+          width: 40%;
+        }
+        .apply-section .apply .apply-info {
+          width: 65%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bcg">
+      <!-- header -->
+      <header>
+        <div class="header-top">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <div class="socials">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <h2>EDU MEETING</h2>
+          <label for="toggle"><i class="fa-solid fa-bars"></i></label>
+          <input type="checkbox" name="" id="toggle" />
+          <div class="wrapper">
+            <nav>
+              <a href="#">Home</a>
+              <a href="#">MEETINGS</a>
+              <a href="#">APPLY NOW</a>
+              <a href="#">PAGES</a>
+              <a href="#">COURSES</a>
+              <a href="#">CONTACT US</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- main -->
+      <main>
+        <!-- apply-section -->
+        <div class="apply-section">
+          <div class="apply">
+            <div class="apply-info" id="one">
+              <h3>APPLY FOR BACHELOR DEGREE</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
+                vero aliquid debitis reprehenderit libero repellat!
+              </p>
+              <button>JOIN US NOW</button>
+            </div>
+            <div class="apply-info" id="two">
+              <h3>APPLY FOR BACHELOR DEGREE</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
+                vero aliquid debitis reprehenderit libero repellat!
+              </p>
+              <button>JOIN US NOW</button>
+            </div>
+          </div>
+          <div class="about-meeting">
+            <h3>
+              About Edu Meeting Html Template
+              <i class="fa-solid fa-angle-down"></i>
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
+              sunt fuga tempora quae ipsa eligendi quis, nesciunt vel quibusdam
+              exercitationem? Quo quisquam necessitatibus placeat veritatis.
+            </p>
+            <h3 class="title">
+              HTML CSS Bootstrap Layout<i class="fa-solid fa-angle-right"></i>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h3 class="title">
+              Please tell your friends<i class="fa-solid fa-angle-right"></i>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h3 class="title">
+              Share this to your colleges<i class="fa-solid fa-angle-right"></i>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </main>
+      <hr />
+      <!-- footer -->
+      <footer>
+        <h5>
+          COPYRIGHT &#169; 2045 EDU MEETING CO., LTD. ALL RIGHTS RESERVED.
+        </h5>
+        <h5>
+          DESIGN:
+          <span style="color: var(--icon-secondary-color)">TEMPLATEMO</span>
+        </h5>
+      </footer>
+    </div>
+  </body>
+</html>
