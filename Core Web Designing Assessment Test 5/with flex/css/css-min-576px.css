@@ -1,0 +1,9 @@
+@media (min-width: 576px) {
+  header .header-top .socials {
+    display: flex;
+  }
+
+  header .header-bottom {
+    padding: 27px 50px;
+  }
+}

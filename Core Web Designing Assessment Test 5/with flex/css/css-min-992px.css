@@ -1,0 +1,90 @@
+@media (min-width: 992px) {
+  header .header-bottom label {
+    display: none;
+  }
+  header .header-bottom .wrapper {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+  }
+  header .header-bottom .wrapper nav {
+    flex-direction: row;
+  }
+
+  .hero-section .info {
+    padding-top: 15%;
+  }
+  .hero-section .cards {
+    flex-wrap: nowrap;
+    padding: 0 10%;
+  }
+  .cards .card {
+    width: fit-content;
+  }
+
+  .meeting-section .meetings {
+    flex-wrap: nowrap;
+  }
+  .meeting-section .meetings .meeting-catagories {
+    width: 45%;
+    margin-left: 50px;
+  }
+  .meetings .meeting-schedule .meeting {
+    height: 250px;
+    width: 270px;
+  }
+
+  .apply-section {
+    padding: 60px 20px;
+    flex-wrap: nowrap;
+  }
+  .apply-section .apply {
+    padding: 40px 0;
+  }
+  .apply-section .about-meeting {
+    width: 90%;
+
+    h3 {
+      font-size: 17px;
+    }
+    p {
+      font-size: 15px;
+      margin: 0;
+    }
+  }
+
+  .course-section .scroll-bar {
+    display: flex;
+  }
+
+  .about-us-section .wrapper {
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+  .about-us-section .wrapper .about-us-infos {
+    flex-wrap: nowrap;
+  }
+  .about-us-section .wrapper .about-us-infos img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-section {
+    flex-wrap: nowrap;
+  }
+  .contact-section .contact-form {
+    width: fit-content;
+  }
+  .contact-section {
+    padding: 70px 20px;
+  }
+  .contact-section .contact-info {
+    width: 300px;
+  }
+
+  footer {
+    padding: 40px 0 50px;
+  }
+}

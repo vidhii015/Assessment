@@ -1,0 +1,51 @@
+@media (min-width: 1200px) {
+  :root {
+    --primary-padding: 10px 70px;
+  }
+
+  header .header-bottom {
+    padding: 27px 70px;
+  }
+
+  .hero-section .info {
+    padding-top: 12%;
+
+    p {
+      width: 40%;
+    }
+  }
+  .cards .card {
+    padding: 35px 30px;
+  }
+
+  .meeting-section .meetings .meeting-catagories {
+    margin-left: 100px;
+  }
+
+  .apply-section {
+    padding: 55px 120px;
+  }
+  .apply-section .about-meeting {
+    width: 40%;
+  }
+  .apply-section .apply .apply-info {
+    width: 65%;
+  }
+
+  .course-section h2 {
+    padding: 0 0 0 110px;
+  }
+  .course-section .icons {
+    display: flex;
+  }
+
+  .about-us-section .wrapper .about-us-infos img {
+    width: 530px;
+    height: 350px;
+  }
+
+  .contact-section {
+    padding: 70px 50px;
+    margin-left: 100px;
+  }
+}

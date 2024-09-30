@@ -1,0 +1,92 @@
+@media (min-width: 992px) {
+  header .header-bottom label {
+    display: none;
+  }
+  header .header-bottom .wrapper {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+  }
+  header .header-bottom .wrapper nav {
+    flex-direction: row;
+  }
+
+  .hero-section .info {
+    padding-top: 15%;
+  }
+  .hero-section .cards {
+    flex-wrap: nowrap;
+    padding: 0 10%;
+  }
+  .cards .card {
+    width: fit-content;
+  }
+
+  .meeting-section .meetings {
+    grid-template-columns: 1fr;
+  }
+  .meeting-section .meetings .meeting-catagories {
+    grid-column: span 1;
+  }
+  .meetings .meeting-schedule .meeting {
+    height: 270px;
+    width: 270px;
+  }
+
+  .apply-section {
+    padding: 60px 20px;
+    flex-wrap: nowrap;
+  }
+  .apply-section .apply {
+    padding: 40px 0;
+  }
+  .apply-section .about-meeting {
+    width: 90%;
+
+    h3 {
+      font-size: 17px;
+    }
+    p {
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .course-section .scroll-bar {
+      display: flex;
+    }
+
+    .about-us-section .wrapper .about-us-infos img {
+      width: 370px;
+      height: 350px;
+    }
+    .about-us-section .wrapper .about-us-infos .about-us-info {
+      grid-template-rows: repeat(3, 1fr);
+    }
+    .about-us-section .wrapper {
+      grid-gap: 132px;
+    }
+
+    .about-us-section .wrapper .about-us-infos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .contact-section {
+    grid-gap: 350px;
+  }
+  .contact-section .contact-form {
+    width: 650px;
+  }
+  .contact-section {
+    padding: 70px 20px;
+  }
+  .contact-section .contact-info {
+    width: 300px;
+  }
+
+  footer {
+    padding: 40px 0 50px;
+  }
+}

@@ -1,0 +1,130 @@
+@media (max-width: 400px) {
+  :root {
+    --primary-padding: 10px 10px;
+  }
+
+  header .header-top {
+    font-size: 11px;
+    justify-content: center;
+  }
+  header .header-top .socials {
+    display: none;
+  }
+
+  header .header-bottom {
+    padding: 23px 15px;
+    position: relative;
+  }
+  header .header-bottom .wrapper {
+    visibility: hidden;
+  }
+  header .header-bottom .wrapper {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    opacity: 0;
+    border-radius: 8px;
+    background-color: rgb(191, 191, 191);
+    padding: 10px;
+  }
+  header .header-bottom .wrapper nav {
+    flex-direction: column;
+  }
+
+  .hero-section .info {
+    padding-top: 35%;
+
+    p {
+      width: 100%;
+    }
+  }
+  .hero-section .icons {
+    display: none;
+  }
+  .hero-section .cards {
+    flex-wrap: wrap;
+    padding: 0 5%;
+  }
+  .cards .card {
+    padding: 20px 15px;
+    width: 85%;
+  }
+
+  .meeting-section .meetings {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .meeting-section .meetings .meeting-catagories {
+    width: 85%;
+    padding: 25px 30px;
+    margin-left: 0;
+  }
+  .meetings .meeting-schedule .meeting {
+    height: 270px;
+    width: 300px;
+
+    h3 {
+      font-size: 13px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .apply-section {
+    padding: 50px 20px;
+  }
+  .apply-section .apply {
+    padding: 40px 0;
+  }
+  .apply-section .apply .apply-info {
+    width: 90%;
+  }
+  .apply-section .about-meeting {
+    width: 90%;
+
+    h3 {
+      font-size: 12px;
+    }
+    p {
+      font-size: 10px;
+      margin: 0;
+    }
+  }
+
+  .course-section {
+    padding: 70px 0;
+  }
+  .course-section h2 {
+    padding: 0 0 0 20px;
+  }
+
+  .about-us-section {
+    padding: 40px 30px;
+  }
+  .about-us-section .wrapper .about-us-infos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-us-section .wrapper .about-us-infos img {
+    width: 250px;
+    height: 250px;
+  }
+  .about-us-section h1 {
+    font-size: 25px;
+  }
+
+  .contact-section {
+    padding: 50px 30px;
+  }
+  .contact-section .contact-form {
+    width: 100%;
+    padding: 20px;
+  }
+  .contact-section .contact-info {
+    width: 100%;
+  }
+
+  footer {
+    padding: 20px 10px 30px;
+  }
+}
